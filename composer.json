@@ -1,0 +1,29 @@
+{
+    "name": "oxid-esales/econda-tracking-component",
+    "description": "Econda tracking component provides Econda tracking functionality for Analytics and Personalization modules.",
+    "homepage": "https://www.oxid-esales.com",
+    "license": [
+        "GPL-3.0-only"
+    ],
+    "require": {
+        "php": ">=7.0",
+        "econda/tracking": "^3.0.1",
+        "symfony/filesystem": "^3.0",
+        "gargron/fileupload": "^1.4.5",
+        "webmozart/path-util": "^2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "mikey179/vfsStream": "~1.6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "OxidEsales\\EcondaTrackingComponent\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OxidEsales\\EcondaTrackingComponent\\Tests\\": "./tests"
+        }
+    }
+}
