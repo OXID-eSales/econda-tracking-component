@@ -21,7 +21,7 @@ class Email extends BaseObject implements TrackingItemInterface
     
     /**
      * Constructor
-     * @param type $nameOrPropertiesArray Name of download or an assoc array of property values.
+     * @param string $nameOrPropertiesArray Name of download or an assoc array of property values.
      */
     public function __construct($nameOrPropertiesArray = null)
     {

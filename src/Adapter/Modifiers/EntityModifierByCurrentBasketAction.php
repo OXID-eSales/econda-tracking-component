@@ -8,7 +8,9 @@ namespace OxidEsales\EcondaTrackingComponent\Adapter\Modifiers;
 
 use OxidEsales\EcondaTrackingComponent\Adapter\Helper\CategoryPathBuilder;
 use OxidEsales\EcondaTrackingComponent\Adapter\ProductPreparation\ProductDataPreparator;
-use OxidEsales\EcondaAnalyticsModule\Component\Tracking\ActivePageEntityInterface;
+use OxidEsales\EcondaTrackingComponent\TrackingCodeGenerator\ActivePageEntityInterface;
+use /** @noinspection PhpUndefinedClassInspection */
+    OxidEsales\Eshop\Application\Model\Article;
 use OxidEsales\Eshop\Core\Registry;
 
 /**
@@ -78,7 +80,7 @@ class EntityModifierByCurrentBasketAction
     private function changeBasketAction($callData)
     {
         foreach ($callData as $itemId => $itemData) {
-            $product = oxNew(\OxidEsales\Eshop\Application\Model\Article::class);
+            $product = oxNew(Article::class);
             if ($product->load($itemData['aid'])) {
                 if ($itemData['oldam'] > $itemData['am'] && $product->load($itemData['aid'])) {
                     //ECONDA FIX always use the main category
@@ -101,7 +103,7 @@ class EntityModifierByCurrentBasketAction
     {
         foreach ($callData as $itemId => $itemData) {
             // ECONDA FIX if there is a "add to basket" in the artcle list view, we do not have a product ID here
-            $product = oxNew(\OxidEsales\Eshop\Application\Model\Article::class);
+            $product = oxNew(Article::class);
             if ($product->load($itemId)) {
                 $path = $this->categoryPathBuilder->getBasketProductCategoryPath($product);
                 $this->pageEntity->setProductToBasket($this->productDataPreparator->prepareForTransaction($product, $path, $itemData['am']));

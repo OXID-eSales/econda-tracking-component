@@ -105,7 +105,7 @@ class ActivePageEntityPreparator extends \OxidEsales\Eshop\Core\Base
     {
         $this->activePageEntity->setPageid($this->getPageIdentifiers()->getPageId());
         $this->activePageEntity->setLangid(Registry::getLang()->getBaseLanguage());
-        $domain = str_ireplace('www.', '', parse_url($this->getConfig()->getShopUrl(), PHP_URL_HOST));
+        $domain = str_ireplace('www.', '', parse_url(Registry::getConfig()->getShopUrl(), PHP_URL_HOST));
         $this->activePageEntity->setSiteid($domain);
 
         $this->setControllerInfo($parameters);

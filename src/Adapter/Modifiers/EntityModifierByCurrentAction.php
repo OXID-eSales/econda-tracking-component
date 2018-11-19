@@ -163,8 +163,8 @@ class EntityModifierByCurrentAction
             /** @var \OxidEsales\Eshop\Application\Model\BasketItem $oContent */
             $sId = $oContent->getProductId();
 
-            /** @var \OxidEsales\Eshop\Application\Model\Article $oProduct */
-            $oProduct = oxNew(\OxidEsales\Eshop\Application\Model\Article::class);
+            /** @var Article $oProduct */
+            $oProduct = oxNew(Article::class);
             $oProduct->load($sId);
 
             $sPath = $this->categoryPathBuilder->getBasketProductCategoryPath($oProduct);
