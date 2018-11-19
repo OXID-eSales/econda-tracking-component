@@ -57,17 +57,17 @@ class ProductDataPreparator
     }
 
     /**
-     * @param Article $product
-     * @param string  $categoryPath
+     * @param Article|ProductInterface $product
+     * @param string                   $categoryPath
      *
      * @return array
      */
     protected function prepareData($product, $categoryPath)
     {
-        $currentProductId = $product->oeEcondaAnalyticsGetProductId();
+        $currentProductId = $product->oeEcondaTrackingGetProductId();
         $productData = [
             'pid' => $currentProductId,
-            'sku' => $product->oeEcondaAnalyticsGetSku(),
+            'sku' => $product->oeEcondaTrackingGetSku(),
         ];
 
         $currency = Registry::getConfig()->getActShopCurrencyObject();
