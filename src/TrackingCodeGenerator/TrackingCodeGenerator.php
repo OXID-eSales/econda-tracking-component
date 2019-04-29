@@ -65,8 +65,11 @@ class TrackingCodeGenerator implements TrackingCodeGeneratorInterface
         $this->addNewsletterSubscriptionDataToPageView();
         $this->addEmailToPageView();
 
-        $jsCode = "<script type=\"text/javascript\" " .
-            "src=\"" . $this->url . "\" async=\"async\">" . " </script>";
+        $jsCode = '';
+        if (!empty($this->url)) {
+            $jsCode .= "<script type=\"text/javascript\" " .
+                "src=\"" . $this->url . "\" async=\"async\">" . " </script>";
+        }
         $jsCode .= (string) $this->pageView;
 
         return $jsCode;
