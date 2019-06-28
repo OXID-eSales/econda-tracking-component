@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Add php 7.3 travis run
 
+### Fixed
+- Fix empty userId in thank you page for order with guest user.
+
 ## [1.0.3] - 2019-04-29
 
 ### Changed
