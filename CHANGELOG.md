@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.0.4] - Unreleased
+## [1.0.4] - 2019-07-05
 
 ### Added
 - Add php 7.3 travis run
