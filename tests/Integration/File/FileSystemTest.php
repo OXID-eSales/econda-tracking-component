@@ -16,7 +16,7 @@ class FileSystemTest extends TestCase
 
     private $virtualDirectory;
 
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->virtualDirectory = $this->createVirtualPath();

@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.0] - 2020-03-25
+
+### Added
+_ Added php 7.4 to travis run.
+
+### Changed
+- Increase `symfony/filesystem` version.
+- Increase `phpunit/phpunit` version.
+- Use only lower cases in `composer.json` file.
+
+### Removed
+- Removed php 7.0, 7.1 and 7.2 from travis run.
+
+### Fixed
+- Fixed compatibility issues regarding setUp phpunit method.
+
 ## [1.0.4] - 2019-07-05
 
 ### Added
@@ -30,4 +46,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.0.0] - 2018-11-15
 
 
-[1.0.4]: https://github.com/OXID-eSales/oxideshop_pe/compare/v1.0.3...master
+[1.1.0]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.4...v1.1.0
+[1.0.4]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.3...v1.0.4
+[1.0.3]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.2...v1.0.3
+[1.0.2]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/OXID-eSales/econda-tracking-component/compare/80d7fdecd2241c9710a8ae573db5c604d0c9348c...v1.0.0
