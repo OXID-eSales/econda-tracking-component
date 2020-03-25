@@ -7,8 +7,15 @@ php:
   - "7.3"
   - "7.4"
 
+cache:
+    directories:
+        - $HOME/.composer/cache/files
+
+matrix:
+    fast_finish: true
+
 install:
-  - composer install
+    - travis_retry composer install --prefer-dist --no-interaction
 
 script:
   - vendor/bin/phpunit tests
