@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.1] - 2020-06-16
+
+### Fixed
+- Fix js cache refresh issue by adding file timestamp [PR-1](https://github.com/OXID-eSales/econda-tracking-component/pull/1)
+
 ## [1.1.0] - 2020-03-25
 
 ### Added
@@ -23,7 +28,7 @@ _ Added php 7.4 to travis run.
 ## [1.0.5] - 2020-06-16
 
 ### Fixed
-- Fix js cache refresh issue by adding file timestamp [PR-1](Added timestamp to URL to allow caching)
+- Fix js cache refresh issue by adding file timestamp [PR-1](https://github.com/OXID-eSales/econda-tracking-component/pull/1)
 
 ## [1.0.4] - 2019-07-05
 
@@ -51,6 +56,7 @@ _ Added php 7.4 to travis run.
 ## [1.0.0] - 2018-11-15
 
 
+[1.1.1]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.4...v1.1.0
 [1.0.5]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.3...v1.0.4
