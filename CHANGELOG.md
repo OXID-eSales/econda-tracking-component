@@ -20,6 +20,11 @@ _ Added php 7.4 to travis run.
 ### Fixed
 - Fixed compatibility issues regarding setUp phpunit method.
 
+## [1.0.5] - 2020-06-16
+
+### Fixed
+- Fix js cache refresh issue by adding file timestamp [PR-1](Added timestamp to URL to allow caching)
+
 ## [1.0.4] - 2019-07-05
 
 ### Added
@@ -47,6 +52,7 @@ _ Added php 7.4 to travis run.
 
 
 [1.1.0]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.4...v1.1.0
+[1.0.5]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.1...v1.0.2

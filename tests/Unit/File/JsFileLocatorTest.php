@@ -6,6 +6,7 @@
 
 namespace OxidEsales\EcondaTrackingComponent\Tests\Unit\File;
 
+use org\bovigo\vfs\vfsStream;
 use OxidEsales\EcondaTrackingComponent\File\JsFileLocator;
 use PHPUnit\Framework\TestCase;
 
@@ -50,23 +51,59 @@ class JsFileLocatorTest extends TestCase
 
     public function testGetJsFileUrlWhenMainShop()
     {
-        $locator = new JsFileLocator('root_path',static::TRACKING_CODE_DIRECTORY_NAME, 'file_name', 'oxideshop.local/out', 1);
+        $structure = [
+            static::TRACKING_CODE_DIRECTORY_NAME => [
+                'file_name' => 'some content'
+            ]
+        ];
+        $rootPath = vfsStream::setup(
+            'root_path',
+            NULL,
+            $structure
+        );
+
+        $locator = new JsFileLocator(
+            $rootPath->url(),
+            static::TRACKING_CODE_DIRECTORY_NAME,
+            'file_name',
+            'oxideshop.local/out',
+            1
+        );
+
         $expectedUrl = 'oxideshop.local/out'
             . '/' . static::TRACKING_CODE_DIRECTORY_NAME
-            . '/file_name';
-
+            . '/file_name?' . $rootPath->filemtime();
 
         $this->assertSame($expectedUrl, $locator->getJsFileUrl());
     }
 
     public function testGetJsFileUrlWhenSubShop()
     {
-        $locator = new JsFileLocator('root_path',static::TRACKING_CODE_DIRECTORY_NAME, 'file_name', 'oxideshop.local/out', 2);
+        $structure = [
+            static::TRACKING_CODE_DIRECTORY_NAME => [
+                '2' => [
+                    'file_name' => 'some content'
+                ]
+            ]
+        ];
+        $rootPath = vfsStream::setup(
+            'root_path',
+            NULL,
+            $structure
+        );
+
+        $locator = new JsFileLocator(
+            $rootPath->url(),
+            static::TRACKING_CODE_DIRECTORY_NAME,
+            'file_name',
+            'oxideshop.local/out',
+            2
+        );
+
         $expectedUrl = 'oxideshop.local/out'
             . '/' . static::TRACKING_CODE_DIRECTORY_NAME
             . '/2'
-            . '/file_name';
-
+            . '/file_name?' . $rootPath->filemtime();
 
         $this->assertSame($expectedUrl, $locator->getJsFileUrl());
     }
