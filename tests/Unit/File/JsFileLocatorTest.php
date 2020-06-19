@@ -107,4 +107,30 @@ class JsFileLocatorTest extends TestCase
 
         $this->assertSame($expectedUrl, $locator->getJsFileUrl());
     }
+
+    public function testGetJsFileUrlWhenFileNotExists()
+    {
+        $structure = [
+            static::TRACKING_CODE_DIRECTORY_NAME => [
+                'file_name' => 'some content'
+            ]
+        ];
+        $rootPath = vfsStream::setup(
+            'root_path',
+            NULL,
+            $structure
+        );
+
+        $locator = new JsFileLocator(
+            $rootPath->url(),
+            static::TRACKING_CODE_DIRECTORY_NAME,
+            'not_existing_file',
+            'oxideshop.local/out',
+            1);
+        $expectedUrl = 'oxideshop.local/out'
+                       . '/' . static::TRACKING_CODE_DIRECTORY_NAME
+                       . '/not_existing_file';
+
+        $this->assertSame($expectedUrl, $locator->getJsFileUrl());
+    }
 }

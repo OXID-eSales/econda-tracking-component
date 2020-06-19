@@ -108,8 +108,11 @@ class JsFileLocator
     public function getTimestampFileName(): string
     {
         $fileInfo = new \SplFileInfo($this->getJsFileLocation());
-        $modified  = $fileInfo->getMTime();
-        return $this->getFileName() . "?" . $modified;
+        $modified = '';
+        if ($fileInfo->isFile()) {
+            $modified  = $fileInfo->getMTime();
+        }
+        return $modified ? $this->getFileName() . "?" . $modified : $this->getFileName();
     }
 
     /**
