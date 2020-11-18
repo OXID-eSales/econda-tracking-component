@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.6] - 2020-12-02
+
+### Changed
+- Change visibility of `OxidEsales\PersonalizationModule\Component\Tracking\TrackingCodeGenerator::initializePageView()` and TrackingCodeGenerator class members to protected.
+
 ## [1.0.5] - 2020-06-16
 
 ### Fixed
@@ -35,5 +40,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.0.0] - 2018-11-15
 
 
-[1.0.4]: https://github.com/OXID-eSales/oxideshop_pe/compare/v1.0.4...v1.0.5
-[1.0.4]: https://github.com/OXID-eSales/oxideshop_pe/compare/v1.0.3...v1.0.4
+[1.0.6]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.5...v1.0.6
+[1.0.5]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.4...v1.0.5
+[1.0.4]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.3...v1.0.4
