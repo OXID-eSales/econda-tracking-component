@@ -25,6 +25,11 @@ _ Added php 7.4 to travis run.
 ### Fixed
 - Fixed compatibility issues regarding setUp phpunit method.
 
+## [1.0.6] - 2020-12-02
+
+### Changed
+- Change visibility of `OxidEsales\PersonalizationModule\Component\Tracking\TrackingCodeGenerator::initializePageView()` and TrackingCodeGenerator class members to protected.
+
 ## [1.0.5] - 2020-06-16
 
 ### Fixed
@@ -58,6 +63,7 @@ _ Added php 7.4 to travis run.
 
 [1.1.1]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.4...v1.1.0
+[1.0.6]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.2...v1.0.3

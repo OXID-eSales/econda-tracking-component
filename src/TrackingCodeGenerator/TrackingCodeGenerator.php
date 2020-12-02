@@ -31,12 +31,12 @@ class TrackingCodeGenerator implements TrackingCodeGeneratorInterface
     /**
      * @var ActivePageEntityInterface
      */
-    private $activePageEntity;
+    protected $activePageEntity;
 
     /**
      * @var PageView
      */
-    private $pageView;
+    protected $pageView;
 
     /**
      * @param ActivePageEntityInterface $activePageEntity
@@ -78,7 +78,7 @@ class TrackingCodeGenerator implements TrackingCodeGeneratorInterface
     /**
      * @return PageView
      */
-    private function initializePageView()
+    protected function initializePageView()
     {
         $trackingPage = new PageView([
             'siteId' => $this->activePageEntity->getSiteid(),
