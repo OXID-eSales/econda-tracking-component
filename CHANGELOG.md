@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.2] - 2020-12-17
+
+### Changed
+- Change visibility of `OxidEsales\PersonalizationModule\Component\Tracking\TrackingCodeGenerator::initializePageView()` and TrackingCodeGenerator class members to protected.
+
 ## [1.1.1] - 2020-06-16
 
 ### Fixed
@@ -60,7 +65,7 @@ _ Added php 7.4 to travis run.
 
 ## [1.0.0] - 2018-11-15
 
-
+[1.1.2]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.4...v1.1.0
 [1.0.6]: https://github.com/OXID-eSales/econda-tracking-component/compare/v1.0.5...v1.0.6
