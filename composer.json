@@ -6,9 +6,9 @@
         "GPL-3.0-only"
     ],
     "require": {
-        "php": "^7.3 || ^8.0",
+        "php": "^8.0",
         "econda/tracking": "^3.0.1",
-        "symfony/filesystem": "^4.4.17 || ^5.0.4",
+        "symfony/filesystem": "^6.0",
         "gargron/fileupload": "^1.4.5",
         "webmozart/path-util": "^2.3"
     },
